@@ -10,11 +10,20 @@ document.body.style.backgroundColor = "#272527";
 document.body.style.fontFamily = "Inter, Roboto";
 document.body.style.fontFeatureSettings = '"liga", "tnum"';
 
+const nextStylesheet = document.querySelector("link[data-n-g]").sheet;
+
 const code = `
   code, kbd, pre, samp {
     font-family: "JetBrains Mono", SFMono-Regular, ui-monospace, monospace;
     font-size: 1.1em;
   }
 `;
-const styleSheet = document.styleSheets[0];
-styleSheet.insertRule(code, styleSheet.cssRules.length);
+
+try {
+  nextStylesheet.insertRule(code, nextStylesheet.cssRules.length);
+} catch (error) {
+  // If access is restricted, create a new stylesheet instead
+  const style = document.createElement("style");
+  style.textContent = code;
+  document.head.appendChild(style);
+}
