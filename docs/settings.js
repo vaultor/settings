@@ -22,8 +22,5 @@ const code = `
 try {
   nextStylesheet.insertRule(code, nextStylesheet.cssRules.length);
 } catch (error) {
-  // If access is restricted, create a new stylesheet instead
-  const style = document.createElement("style");
-  style.textContent = code;
-  document.head.appendChild(style);
+  // ...
 }
