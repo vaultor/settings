@@ -21,7 +21,7 @@ const codeCSS = `
 
 const sidebarCSS = `
   .bg-\[color\:var\(--sidebar-color\)\] {
-    background-color: "#161717";
+    background-color: #161717;
   }
 `;
 
