@@ -1,5 +1,5 @@
 const workspace = document.querySelector('[data-element-id="workspace-bar"]');
-workspace.style.backgroundColor = "#19181A";
+workspace.style.backgroundColor = "#181a1b"; // hsl(200 4% 10%)
 workspace.style.borderColor = "#303030";
 
 document
