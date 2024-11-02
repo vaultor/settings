@@ -12,20 +12,22 @@ document.body.style.fontFeatureSettings = '"liga", "tnum"';
 
 const nextStylesheet = document.querySelector("link[data-n-g]").sheet;
 
-const code = `
+const codeCSS = `
   code, kbd, pre, samp {
     font-family: "JetBrains Mono", SFMono-Regular, ui-monospace, monospace;
     font-size: 1.1em;
   }
+`;
 
-
+const sidebarCSS = `
   .bg-\[color\:var\(--sidebar-color\)\] {
     background-color: #161717 !important;
   }
 `;
 
 try {
-  nextStylesheet.insertRule(code, nextStylesheet.cssRules.length);
+  nextStylesheet.insertRule(codeCSS, nextStylesheet.cssRules.length);
+  nextStylesheet.insertRule(sidebarCSS, nextStylesheet.cssRules.length);
 } catch (error) {
   // ...
 }
