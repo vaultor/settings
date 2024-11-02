@@ -1,12 +1,12 @@
 const workspace = document.querySelector('[data-element-id="workspace-bar"]');
-workspace.style.backgroundColor = "#181a1b"; // hsl(200 4% 10%)
+workspace.style.backgroundColor = "#141515"; // (200 2% 8%)
 workspace.style.borderColor = "#303030";
 
 document
   .querySelector('[data-element-id="side-bar-background"]')
-  .style.setProperty("--sidebar-color", "#191a1a"); // hsl(200 3% 10%)
+  .style.setProperty("--sidebar-color", "#191a1a"); // (200 2% 10%)
 
-document.body.style.backgroundColor = "#252727"; // hsl(200 2% 15%)
+document.body.style.backgroundColor = "#252727"; //    (200 2% 15%)
 document.body.style.fontFamily = "Inter, Roboto";
 document.body.style.fontFeatureSettings = '"liga", "tnum"';
 
