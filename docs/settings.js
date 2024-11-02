@@ -19,8 +19,16 @@ const codeCSS = `
   }
 `;
 
+const sidebarCSS = `
+  .bg-\[color\:var\(--sidebar-color\)\] {
+    background-color: "#161717";
+  }
+`;
+
 try {
-  nextStylesheet.insertRule(codeCSS, nextStylesheet.cssRules.length);
+  const length = nextStylesheet.cssRules.length;
+  nextStylesheet.insertRule(codeCSS, length);
+  nextStylesheet.insertRule(sidebarCSS, length + 1);
 } catch (error) {
   // ...
 }
