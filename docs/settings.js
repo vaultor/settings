@@ -1,5 +1,5 @@
 const workspace = document.querySelector('[data-element-id="workspace-bar"]');
-workspace.style.backgroundColor = "#141515"; // (200 2% 8%)
+workspace.style.backgroundColor = "#161717"; // (200 2% 9%)
 workspace.style.borderColor = "#303030";
 
 document
