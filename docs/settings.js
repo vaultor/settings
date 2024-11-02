@@ -27,7 +27,7 @@ const sidebarCSS = `
 const workspacebarCSS = `
   [data-element-id="workspace-bar"] {
     background-color: #141515 !important;
-    border-right: 1px solid #303030 !important;
+    border-right: 1px solid #262626 !important;
   }
 `;
 
