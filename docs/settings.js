@@ -1,8 +1,12 @@
-document.body.style.backgroundColor = "#252727"; //    (200 2% 15%)
-document.body.style.fontFamily = "Inter, Roboto";
-document.body.style.fontFeatureSettings = '"liga", "tnum"';
-
 const nextStylesheet = document.querySelector("link[data-n-g]").sheet;
+
+const bodyCSS = `
+  body {
+    background-color: #252727 !important;
+    font-family: Inter, Roboto !important;
+    font-feature-settings: "liga", "tnum" !important;
+  }
+`;
 
 const codeCSS = `
   code, kbd, pre, samp {
@@ -12,7 +16,7 @@ const codeCSS = `
 `;
 
 // (200 2% 10%)
-const sidebarVarCSS = `
+const sidebarCSS = `
   [data-element-id="side-bar-background"] {
     --sidebar-color: #191a1a !important;
   }
@@ -28,9 +32,10 @@ const workspacebarCSS = `
 
 try {
   const length = nextStylesheet.cssRules.length;
-  nextStylesheet.insertRule(codeCSS, length);
-  nextStylesheet.insertRule(sidebarVarCSS, length + 1);
-  nextStylesheet.insertRule(workspacebarCSS, length + 2);
+  nextStylesheet.insertRule(bodyCSS, length);
+  nextStylesheet.insertRule(codeCSS, length + 1);
+  nextStylesheet.insertRule(sidebarCSS, length + 2);
+  nextStylesheet.insertRule(workspacebarCSS, length + 3);
 } catch (error) {
   // ...
 }
