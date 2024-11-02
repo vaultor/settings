@@ -1,6 +1,6 @@
-const workspace = document.querySelector('[data-element-id="workspace-bar"]');
-workspace.style.backgroundColor = "#161717"; // (200 2% 9%)
-workspace.style.borderColor = "#303030";
+// const workspace = document.querySelector('[data-element-id="workspace-bar"]');
+// workspace.style.backgroundColor = "#161717"; // (200 2% 9%)
+// workspace.style.borderColor = "#303030";
 
 document.body.style.backgroundColor = "#252727"; //    (200 2% 15%)
 document.body.style.fontFamily = "Inter, Roboto";
@@ -17,12 +17,12 @@ const codeCSS = `
 
 const sidebarVarCSS = `
   [data-element-id="side-bar-background"] {
-    --sidebar-color: #191a1a  !important;
+    --sidebar-color: #191a1a !important;
   }
 `;
 
-const sidebarCSS = `
-  .bg-\[color\:var\(--sidebar-color\)\] {
+const workspacebarCSS = `
+  [data-element-id="workspace-bar"] {
     background-color: #161717 !important;
   }
 `;
@@ -31,7 +31,7 @@ try {
   const length = nextStylesheet.cssRules.length;
   nextStylesheet.insertRule(codeCSS, length);
   nextStylesheet.insertRule(sidebarVarCSS, length + 1);
-  nextStylesheet.insertRule(sidebarCSS, length + 2);
+  nextStylesheet.insertRule(workspacebarCSS, length + 2);
 } catch (error) {
   // ...
 }
