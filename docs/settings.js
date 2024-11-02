@@ -4,9 +4,9 @@ workspace.style.borderColor = "#303030";
 
 document
   .querySelector('[data-element-id="side-bar-background"]')
-  .style.setProperty("--sidebar-color", "#221F22");
+  .style.setProperty("--sidebar-color", "#191a1a"); // hsl(200 3% 10%)
 
-document.body.style.backgroundColor = "#272527";
+document.body.style.backgroundColor = "#252727"; // hsl(200 2% 15%)
 document.body.style.fontFamily = "Inter, Roboto";
 document.body.style.fontFeatureSettings = '"liga", "tnum"';
 
