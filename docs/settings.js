@@ -7,10 +7,10 @@ const codeCSS = `
   }
 `;
 
-// (200 3% 9%)
+// (200 2% 12%)
 const bodyCSS = `
   body {
-    background-color: #161718 !important;
+    background-color: #1e1f1f !important;
     font-family: Inter, Roboto !important;
     font-feature-settings: "liga", "tnum" !important;
   }
@@ -27,7 +27,7 @@ const sidebarCSS = `
 const workspacebarCSS = `
   [data-element-id="workspace-bar"] {
     background-color: #141515 !important;
-    border-color: #303030 !important;
+    border-right: 1px solid #303030 !important;
   }
 `;
 
