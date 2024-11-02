@@ -1,10 +1,10 @@
-// const workspace = document.querySelector('[data-element-id="workspace-bar"]');
-// workspace.style.backgroundColor = "#161717"; // (200 2% 9%)
-// workspace.style.borderColor = "#303030";
+const workspace = document.querySelector('[data-element-id="workspace-bar"]');
+workspace.style.backgroundColor = "#161717"; // (200 2% 9%)
+workspace.style.borderColor = "#303030";
 
-// document
-//   .querySelector('[data-element-id="side-bar-background"]')
-//   .style.setProperty("--sidebar-color", "#191a1a"); // (200 2% 10%)
+document
+  .querySelector('[data-element-id="side-bar-background"]')
+  .style.setProperty("--sidebar-color", "#191a1a"); // (200 2% 10%)
 
 document.body.style.backgroundColor = "#252727"; //    (200 2% 15%)
 document.body.style.fontFamily = "Inter, Roboto";
@@ -19,15 +19,8 @@ const codeCSS = `
   }
 `;
 
-const sidebarCSS = `
-  .bg-\[color\:var\(--sidebar-color\)\] {
-    background-color: #161717 !important;
-  }
-`;
-
 try {
   nextStylesheet.insertRule(codeCSS, nextStylesheet.cssRules.length);
-  nextStylesheet.insertRule(sidebarCSS, nextStylesheet.cssRules.length);
 } catch (error) {
   // ...
 }
