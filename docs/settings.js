@@ -10,7 +10,7 @@ const codeCSS = `
 // (200 2% 12%)
 const bodyCSS = `
   body {
-    background-color: #1e1f1f;
+    background-color: #1e1f1f !important;
     font-family: Inter, Roboto ;
     font-feature-settings: "liga", "tnum";
   }
