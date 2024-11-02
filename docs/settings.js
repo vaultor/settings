@@ -17,7 +17,7 @@ const codeCSS = `
 
 const sidebarVarCSS = `
   [data-element-id="side-bar-background"] {
-    --sidebar-color: #191a1a;
+    --sidebar-color: #191a1a  !important;
   }
 `;
 
@@ -29,8 +29,8 @@ const sidebarCSS = `
 
 try {
   const length = nextStylesheet.cssRules.length;
-  nextStylesheet.insertRule(sidebarVarCSS, length);
-  nextStylesheet.insertRule(codeCSS, length + 1);
+  nextStylesheet.insertRule(codeCSS, length);
+  nextStylesheet.insertRule(sidebarVarCSS, length + 1);
   nextStylesheet.insertRule(sidebarCSS, length + 2);
 } catch (error) {
   // ...
