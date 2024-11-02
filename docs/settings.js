@@ -32,11 +32,11 @@ const workspacebarCSS = `
 `;
 
 try {
-  const length = nextStylesheet.cssRules.length;
-  nextStylesheet.insertRule(codeCSS, length);
-  nextStylesheet.insertRule(bodyCSS, length + 1);
-  nextStylesheet.insertRule(sidebarCSS, length + 2);
-  nextStylesheet.insertRule(workspacebarCSS, length + 3);
+  let length = nextStylesheet.cssRules.length;
+  nextStylesheet.insertRule(codeCSS, length++);
+  nextStylesheet.insertRule(bodyCSS, length++);
+  nextStylesheet.insertRule(sidebarCSS, length++);
+  nextStylesheet.insertRule(workspacebarCSS, length++);
 } catch (error) {
   // ...
 }
