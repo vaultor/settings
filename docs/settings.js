@@ -1,3 +1,7 @@
+const BODY_COLOR = "#1e1f1f"; //          (200 2% 12%)
+const SIDEBAR_COLOR = "#161717"; //       (200 2% 9%)
+const WORKSPACEBAR_COLOR = "#141515"; //  (200 2% 8%)
+
 const nextStylesheet = document.querySelector("link[data-n-g]").sheet;
 
 const codeCSS = `
@@ -7,26 +11,23 @@ const codeCSS = `
   }
 `;
 
-// (200 2% 12%)
 const bodyCSS = `
   body {
-    background-color: #1e1f1f !important;
+    background-color: ${BODY_COLOR} !important;
     font-family: Inter, Roboto ;
     font-feature-settings: "liga", "tnum";
   }
 `;
 
-// (200 2% 9%)
 const sidebarCSS = `
   [data-element-id="side-bar-background"] {
-    --sidebar-color: #161717 !important;
+    --sidebar-color: ${SIDEBAR_COLOR} !important;
   }
 `;
 
-// (200 2% 8%)
 const workspacebarCSS = `
   [data-element-id="workspace-bar"] {
-    background-color: #141515 !important;
+    background-color: ${WORKSPACEBAR_COLOR} !important;
     border-right: 1px solid #262626 !important;
   }
 `;
