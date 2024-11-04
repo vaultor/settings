@@ -11,6 +11,13 @@ const codeCSS = `
   }
 `;
 
+const proseCSS = `
+  .prose-sm {
+    font-size: 0.9375rem;
+    line-height: 1.7142857;
+  }
+`;
+
 const bodyCSS = `
   body {
     background-color: ${BODY_COLOR} !important;
@@ -35,6 +42,7 @@ const workspacebarCSS = `
 try {
   let length = nextStylesheet.cssRules.length;
   nextStylesheet.insertRule(codeCSS, length++);
+  nextStylesheet.insertRule(proseCSS, length++);
   nextStylesheet.insertRule(bodyCSS, length++);
   nextStylesheet.insertRule(sidebarCSS, length++);
   nextStylesheet.insertRule(workspacebarCSS, length++);
