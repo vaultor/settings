@@ -21,7 +21,8 @@ const proseCSS = `
 const bodyCSS = `
   body {
     background-color: ${BODY_COLOR} !important;
-    font-family: Inter, Roboto ;
+    font-family: Inter, Roboto,
+    ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
     font-feature-settings: "liga", "tnum";
   }
 `;
