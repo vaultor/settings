@@ -42,7 +42,7 @@ const workspacebarCSS = `
 try {
   let length = nextStylesheet.cssRules.length;
   nextStylesheet.insertRule(codeCSS, length++);
-  nextStylesheet.insertRule(proseCSS, length++);
+  // nextStylesheet.insertRule(proseCSS, length++);
   nextStylesheet.insertRule(bodyCSS, length++);
   nextStylesheet.insertRule(sidebarCSS, length++);
   nextStylesheet.insertRule(workspacebarCSS, length++);
