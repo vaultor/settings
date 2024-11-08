@@ -20,7 +20,7 @@ const codeCSS = `
 const costCSS = `
   [data-tooltip-id="global"] span {
     color: #ffc533 !important;
-    font-weight: 500 !important;
+    font-weight: 600 !important;
   }
 `;
 
