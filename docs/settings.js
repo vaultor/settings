@@ -5,8 +5,8 @@ const WORKSPACEBAR_COLOR = "#141515"; //  (200 2% 8%)
 const nextStylesheet = document.querySelector("link[data-n-g]").sheet;
 
 const hoverCSS = `
-  .dark [data-element-id="response-block"].dark\:hover\:bg-white\/5:hover {
-    background-color: hsla(0, 0%, 100%, 0.025);
+  [data-element-id="response-block"]:hover {
+    background-color: hsla(0, 0%, 100%, 0.025) !important;
   }
 `;
 
@@ -58,4 +58,4 @@ try {
   console.log(error);
 }
 
-console.log("ver 20241108.008");
+console.log("ver 20241108.009");
