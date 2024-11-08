@@ -5,8 +5,8 @@ const WORKSPACEBAR_COLOR = "#141515"; //  (200 2% 8%)
 const nextStylesheet = document.querySelector("link[data-n-g]").sheet;
 
 const hoverCSS = `
-  :is(.dark .dark\:hover\:bg-white\/5:hover) {
-    background-color: hsla(0, 0%, 100%, .025) !important;
+  :is(.dark .dark:hover:bg-white\/5:hover) {
+    background-color: hsla(0, 0%, 100%, 0.025) !important;
   }
 `;
 
