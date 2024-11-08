@@ -19,8 +19,8 @@ const codeCSS = `
 
 const costCSS = `
   [data-tooltip-id="global"] span {
-    color: #ffc533; // (43 100% 60%)
-    font-weight: 500;
+    color: #ffc533 !important; // (43 100% 60%)
+    font-weight: 500 !important;
   }
 `;
 
@@ -58,4 +58,4 @@ try {
   console.log(error);
 }
 
-console.log("ver 20241108");
+console.log("ver 20241108.001");
