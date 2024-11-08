@@ -4,17 +4,16 @@ const WORKSPACEBAR_COLOR = "#141515"; //  (200 2% 8%)
 
 const nextStylesheet = document.querySelector("link[data-n-g]").sheet;
 
+const hoverCSS = `
+  .:is(.dark .dark\:hover\:bg-white\/5:hover) {
+    background-color: hsla(0, 0%, 100%, .025);
+  }
+`;
+
 const codeCSS = `
   code, kbd, pre, samp {
     font-family: "JetBrains Mono", SFMono-Regular, ui-monospace, monospace;
     font-size: 1.1em;
-  }
-`;
-
-const proseCSS = `
-  .prose-sm {
-    font-size: 0.9375rem;
-    line-height: 1.7142857;
   }
 `;
 
@@ -41,8 +40,8 @@ const workspacebarCSS = `
 
 try {
   let length = nextStylesheet.cssRules.length;
+  nextStylesheet.insertRule(hoverCSS, length++);
   nextStylesheet.insertRule(codeCSS, length++);
-  // nextStylesheet.insertRule(proseCSS, length++);
   nextStylesheet.insertRule(bodyCSS, length++);
   nextStylesheet.insertRule(sidebarCSS, length++);
   nextStylesheet.insertRule(workspacebarCSS, length++);
