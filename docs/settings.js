@@ -17,6 +17,13 @@ const codeCSS = `
   }
 `;
 
+const costCSS = `
+  [data-tooltip-id="global"] span {
+    color: #ffc533; // (43 100% 60%)
+    font-weight: 500;
+  }
+`;
+
 const bodyCSS = `
   body {
     background-color: ${BODY_COLOR} !important;
@@ -43,6 +50,7 @@ try {
   let length = nextStylesheet.cssRules.length;
   nextStylesheet.insertRule(hoverCSS, length++);
   nextStylesheet.insertRule(codeCSS, length++);
+  nextStylesheet.insertRule(costCSS, length++);
   nextStylesheet.insertRule(bodyCSS, length++);
   nextStylesheet.insertRule(sidebarCSS, length++);
   nextStylesheet.insertRule(workspacebarCSS, length++);
