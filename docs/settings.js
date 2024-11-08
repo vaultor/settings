@@ -47,5 +47,5 @@ try {
   nextStylesheet.insertRule(sidebarCSS, length++);
   nextStylesheet.insertRule(workspacebarCSS, length++);
 } catch (error) {
-  // ...
+  console.log(error);
 }
