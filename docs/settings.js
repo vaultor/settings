@@ -6,7 +6,7 @@ const nextStylesheet = document.querySelector("link[data-n-g]").sheet;
 
 const hoverCSS = `
   :is(.dark .dark\:hover\:bg-white\/5:hover) {
-    background-color: hsla(0, 0%, 100%, .025);
+    background-color: hsla(0, 0%, 100%, .02);
   }
 `;
 
