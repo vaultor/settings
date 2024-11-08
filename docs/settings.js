@@ -6,7 +6,7 @@ const nextStylesheet = document.querySelector("link[data-n-g]").sheet;
 
 const hoverCSS = `
   :is(.dark .dark\:hover\:bg-white\/5:hover) {
-    background-color: hsla(0, 0%, 100%, .02);
+    background-color: hsla(0, 0%, 100%, .025) !important;
   }
 `;
 
@@ -19,7 +19,7 @@ const codeCSS = `
 
 const costCSS = `
   [data-tooltip-id="global"] span {
-    color: #ffc533 !important; // (43 100% 60%)
+    color: #ffc533 !important;
     font-weight: 500 !important;
   }
 `;
