@@ -19,6 +19,7 @@ const codeCSS = `
 
 const costCSS = `
   [data-tooltip-id="global"] span {
+    margin-right: 5px;
     color: #ffc533 !important;
     font-weight: 600 !important;
   }
