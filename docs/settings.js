@@ -59,4 +59,4 @@ try {
   console.log(error);
 }
 
-console.log("ver 20241108.009");
+console.log("ver 20241122.001");
