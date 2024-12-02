@@ -56,7 +56,9 @@ const pane2CSS = `
 const pane3CSS = `
   [data-element-id="chat-space-background"],
   [data-element-id="chat-space-beginning-part"] {
-    background-color: ${CHATSPACE_COLOR} !important;
+    /* background-color: ${CHATSPACE_COLOR} !important; */
+    background: rgba(255, 255, 255, 0.2) !important; /* Translucent white background */
+    backdrop-filter: blur(8px) !important;
   }
 `;
 
@@ -73,4 +75,4 @@ try {
   console.log(error);
 }
 
-console.log("ver 20241202.015");
+console.log("ver 20241202.20");
