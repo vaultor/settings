@@ -54,7 +54,8 @@ const pane2CSS = `
 
 // 3rd pane (right)
 const pane3CSS = `
-  [data-element-id="chat-space-background"] {
+  [data-element-id="chat-space-background"],
+  [data-element-id="chat-space-beginning-part"] {
     background-color: ${CHATSPACE_COLOR} !important;
   }
 `;
