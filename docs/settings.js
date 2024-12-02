@@ -1,6 +1,7 @@
-const BODY_COLOR = "#1e1f1f"; //          (200 2% 12%)
-const SIDEBAR_COLOR = "#161717"; //       (200 2% 9%)
-const CHATSPACE_COLOR = "#141515"; //  (200 2% 8%)
+const BODY_COLOR = "#1e1f1f"; //       (200 2% 12%)
+const SIDEBAR_COLOR = "#161717"; //    (200 2% 9%)
+const WORKSPACE_COLOR = "#141515"; //  (200 2% 8%)
+const CHATSPACE_COLOR = "#1e1f1f"; //  (200 2% 8%)
 
 const nextStylesheet = document.querySelector("link[data-n-g]").sheet;
 
@@ -40,10 +41,16 @@ const sidebarCSS = `
   }
 `;
 
+const workspaceCSS = `
+  [data-element-id="chat-space-background"] {
+    background-color: ${WORKSPACE_COLOR} !important;
+    border-right: 1px solid #262626 !important;
+  }
+`;
+
 const chatspaceCSS = `
   [data-element-id="chat-space-background"] {
     background-color: ${CHATSPACE_COLOR} !important;
-    border-right: 1px solid #262626 !important;
   }
 `;
 
@@ -54,9 +61,10 @@ try {
   nextStylesheet.insertRule(costCSS, length++);
   nextStylesheet.insertRule(bodyCSS, length++);
   nextStylesheet.insertRule(sidebarCSS, length++);
+  nextStylesheet.insertRule(workspaceCSS, length++);
   nextStylesheet.insertRule(chatspaceCSS, length++);
 } catch (error) {
   console.log(error);
 }
 
-console.log("ver 20241202.001");
+console.log("ver 20241202.005");
