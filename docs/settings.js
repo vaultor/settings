@@ -48,7 +48,7 @@ const pane1CSS = `
 const pane2CSS = `
   [data-element-id="side-bar-background"] {
     --sidebar-color: ${SIDEBAR_COLOR} !important;
-    border-right: 1px solid ${BORDER_COLOR}  !important;
+    border-right: 1px solid ${BORDER_COLOR} !important;
   }
 `;
 
@@ -80,4 +80,4 @@ try {
   console.log(error);
 }
 
-console.log("ver 20241202.25");
+console.log("ver 20241202.35");
