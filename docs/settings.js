@@ -52,18 +52,17 @@ const pane2CSS = `
   }
 `;
 
-// 3rd pane (right)
-const pane3CSS = `
-  [data-element-id="chat-space-background"] {
-    background-color: ${CHATSPACE_COLOR} !important;
+// 3rd pane (right-top)
+const pane3aCSS = `
+  [data-element-id="chat-space-beginning-part"] {
+    background-color: ${SIDEBAR_COLOR} !important;
   }
 `;
 
-// 3rd pane (right)
+// 3rd pane (right-bottom)
 const pane3bCSS = `
-  [data-element-id="chat-space-beginning-part"] {
-    background: rgba(255, 255, 255, 0.2) !important;
-    backdrop-filter: blur(8px) !important;
+  [data-element-id="chat-space-background"] {
+    background-color: ${CHATSPACE_COLOR} !important;
   }
 `;
 
@@ -75,7 +74,7 @@ try {
   nextStylesheet.insertRule(bodyCSS, length++);
   nextStylesheet.insertRule(pane1CSS, length++);
   nextStylesheet.insertRule(pane2CSS, length++);
-  nextStylesheet.insertRule(pane3CSS, length++);
+  nextStylesheet.insertRule(pane3aCSS, length++);
   nextStylesheet.insertRule(pane3bCSS, length++);
 } catch (error) {
   console.log(error);
