@@ -40,9 +40,9 @@ const sidebarCSS = `
   }
 `;
 
-const workspacebarCSS = `
-  [data-element-id="workspace-bar"] {
-    background-color: ${WORKSPACEBAR_COLOR} !important;
+const chatspaceCSS = `
+  [data-element-id="chat-space-background"] {
+    background-color: ${CHATSPACE_COLOR} !important;
     border-right: 1px solid #262626 !important;
   }
 `;
@@ -54,9 +54,9 @@ try {
   nextStylesheet.insertRule(costCSS, length++);
   nextStylesheet.insertRule(bodyCSS, length++);
   nextStylesheet.insertRule(sidebarCSS, length++);
-  nextStylesheet.insertRule(workspacebarCSS, length++);
+  nextStylesheet.insertRule(chatspaceCSS, length++);
 } catch (error) {
   console.log(error);
 }
 
-console.log("ver 20241122.001");
+console.log("ver 20241202.001");
