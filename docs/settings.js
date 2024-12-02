@@ -54,10 +54,15 @@ const pane2CSS = `
 
 // 3rd pane (right)
 const pane3CSS = `
-  [data-element-id="chat-space-background"],
+  [data-element-id="chat-space-background"] {
+    background-color: ${CHATSPACE_COLOR} !important;
+  }
+`;
+
+// 3rd pane (right)
+const pane3bCSS = `
   [data-element-id="chat-space-beginning-part"] {
-    /* background-color: ${CHATSPACE_COLOR} !important; */
-    background: rgba(255, 255, 255, 0.2) !important; /* Translucent white background */
+    background: rgba(255, 255, 255, 0.2) !important;
     backdrop-filter: blur(8px) !important;
   }
 `;
@@ -71,8 +76,9 @@ try {
   nextStylesheet.insertRule(pane1CSS, length++);
   nextStylesheet.insertRule(pane2CSS, length++);
   nextStylesheet.insertRule(pane3CSS, length++);
+  nextStylesheet.insertRule(pane3bCSS, length++);
 } catch (error) {
   console.log(error);
 }
 
-console.log("ver 20241202.20");
+console.log("ver 20241202.25");
