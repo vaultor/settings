@@ -1,7 +1,8 @@
 const BODY_COLOR = "#1e1f1f"; //       (200 2% 12%)
-const SIDEBAR_COLOR = "#161717"; //    (200 2% 9%)
 const WORKSPACE_COLOR = "#141515"; //  (200 2% 8%)
+const SIDEBAR_COLOR = "#161717"; //    (200 2% 9%)
 const CHATSPACE_COLOR = "#1e1f1f"; //  (200 2% 8%)
+const BORDER_COLOR = "#262626"; //     (0   0% 15%)
 
 const nextStylesheet = document.querySelector("link[data-n-g]").sheet;
 
@@ -35,20 +36,24 @@ const bodyCSS = `
   }
 `;
 
-const sidebarCSS = `
+// 1st pane (left)
+const pane1CSS = `
+  [data-element-id="workspace-bar"] {
+    background-color: ${WORKSPACE_COLOR} !important;
+    border-right: 1px solid ${BORDER_COLOR} !important;
+  }
+`;
+
+// 2nd pane (middle)
+const pane2CSS = `
   [data-element-id="side-bar-background"] {
     --sidebar-color: ${SIDEBAR_COLOR} !important;
+    border-right: 1px solid ${BORDER_COLOR}  !important;
   }
 `;
 
-const workspaceCSS = `
-  [data-element-id="chat-space-background"] {
-    background-color: ${WORKSPACE_COLOR} !important;
-    border-right: 1px solid #262626 !important;
-  }
-`;
-
-const chatspaceCSS = `
+// 3rd pane (right)
+const pane3CSS = `
   [data-element-id="chat-space-background"] {
     background-color: ${CHATSPACE_COLOR} !important;
   }
@@ -60,11 +65,11 @@ try {
   nextStylesheet.insertRule(codeCSS, length++);
   nextStylesheet.insertRule(costCSS, length++);
   nextStylesheet.insertRule(bodyCSS, length++);
-  nextStylesheet.insertRule(sidebarCSS, length++);
-  nextStylesheet.insertRule(workspaceCSS, length++);
-  nextStylesheet.insertRule(chatspaceCSS, length++);
+  nextStylesheet.insertRule(pane1CSS, length++);
+  nextStylesheet.insertRule(pane2CSS, length++);
+  nextStylesheet.insertRule(pane3CSS, length++);
 } catch (error) {
   console.log(error);
 }
 
-console.log("ver 20241202.005");
+console.log("ver 20241202.008");
