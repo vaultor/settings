@@ -4,10 +4,24 @@ const CHATSPACE_COLOR = "#141515"; //  (200 2% 8%)
 
 const nextStylesheet = document.querySelector("link[data-n-g]").sheet;
 
+const hoverCSS = `
+  [data-element-id="response-block"]:hover {
+    background-color: hsla(0, 0%, 100%, 0.025) !important;
+  }
+`;
+
 const codeCSS = `
   code, kbd, pre, samp {
     font-family: "JetBrains Mono", SFMono-Regular, ui-monospace, monospace;
     font-size: 1.1em;
+  }
+`;
+
+const costCSS = `
+  [data-tooltip-id="global"] span {
+    margin-right: 5px;
+    color: #ffc533 !important;
+    font-weight: 600 !important;
   }
 `;
 
@@ -27,20 +41,22 @@ const sidebarCSS = `
 `;
 
 const workspacebarCSS = `
-  [data-element-id="chat-space-background"] {
-    background-color: ${CHATSPACE_COLOR} !important;
+  [data-element-id="workspace-bar"] {
+    background-color: ${WORKSPACEBAR_COLOR} !important;
     border-right: 1px solid #262626 !important;
   }
 `;
 
 try {
   let length = nextStylesheet.cssRules.length;
+  nextStylesheet.insertRule(hoverCSS, length++);
   nextStylesheet.insertRule(codeCSS, length++);
+  nextStylesheet.insertRule(costCSS, length++);
   nextStylesheet.insertRule(bodyCSS, length++);
   nextStylesheet.insertRule(sidebarCSS, length++);
   nextStylesheet.insertRule(workspacebarCSS, length++);
-
-  console.log("Typingmind Custom CSS v20241202.01");
 } catch (error) {
-  // ...
+  console.log(error);
 }
+
+console.log("ver 20241122.001");
