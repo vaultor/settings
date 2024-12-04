@@ -6,6 +6,16 @@ const BORDER_COLOR = "#262626"; //     (0   0% 15%)
 
 const nextStylesheet = document.querySelector("link[data-n-g]").sheet;
 
+/*
+  Important:
+  For Brave browser, TURN OFF all shields and configure:
+  - Go to Settings > Privacy and security > Site and shields settings.
+  - Under Permissions, click Additional permissions, click Fonts.
+  - Under Allowed to use fonts installed on your device, click Add.
+  - Enter typingmind.com and click Add.
+  - Perform a hard refresh.
+*/
+
 const hoverCSS = `
   [data-element-id="response-block"]:hover {
     background-color: hsla(0, 0%, 100%, 0.025) !important;
