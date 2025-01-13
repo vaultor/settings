@@ -2,6 +2,7 @@ const BODY_COLOR = "#1e1f1f"; //       (200 2% 12%)
 const WORKSPACE_COLOR = "#141515"; //  (200 2% 8%)
 const SIDEBAR_COLOR = "#161717"; //    (200 2% 9%)
 const CHATSPACE_COLOR = "#1e1f1f"; //  (200 2% 8%)
+const CHATBOX_COLOR = "#282929"; //    (200 1% 16%)
 const BORDER_COLOR = "#262626"; //     (0   0% 15%)
 
 const nextStylesheet = document.querySelector("link[data-n-g]").sheet;
@@ -72,8 +73,15 @@ const pane3aCSS = `
 // 3rd pane (right-bottom)
 // old: chat-space-background
 const pane3bCSS = `
-  [data-element-id="chat-space-end-part"] > div {
+  [data-element-id="chat-space-background"] {
     background-color: ${CHATSPACE_COLOR} !important;
+  }
+`;
+
+// chat box
+const chatboxCSS = `
+  [data-element-id="chat-space-end-part"] > div {
+    background-color: ${CHATBOX_COLOR} !important;
   }
 `;
 
@@ -87,8 +95,9 @@ try {
   nextStylesheet.insertRule(pane2CSS, length++);
   nextStylesheet.insertRule(pane3aCSS, length++);
   nextStylesheet.insertRule(pane3bCSS, length++);
+  nextStylesheet.insertRule(chatboxCSS, length++);
 } catch (error) {
   console.log(error);
 }
 
-console.log("ver 20250113.01");
+console.log("ver 20250113.02");
