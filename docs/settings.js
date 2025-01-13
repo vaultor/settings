@@ -70,8 +70,9 @@ const pane3aCSS = `
 `;
 
 // 3rd pane (right-bottom)
+// old: chat-space-background
 const pane3bCSS = `
-  [data-element-id="chat-space-background"] {
+  [data-element-id="chat-space-end-part"] > div {
     background-color: ${CHATSPACE_COLOR} !important;
   }
 `;
