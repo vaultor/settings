@@ -89,7 +89,7 @@ try {
   let length = nextStylesheet.cssRules.length;
   nextStylesheet.insertRule(hoverCSS, length++);
   nextStylesheet.insertRule(codeCSS, length++);
-  nextStylesheet.insertRule(costCSS, length++);
+  // nextStylesheet.insertRule(costCSS, length++);
   nextStylesheet.insertRule(bodyCSS, length++);
   nextStylesheet.insertRule(pane1CSS, length++);
   nextStylesheet.insertRule(pane2CSS, length++);
