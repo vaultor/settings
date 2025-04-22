@@ -33,7 +33,7 @@ const codeCSS = `
 const costCSS = `
   [data-tooltip-id="global"] span:nth-child(1) {
     margin-right: 8px;
-    font0size: 0.9em !important;
+    font-size: 0.9em !important;
     color: #ffc533 !important;
   }
 `;
