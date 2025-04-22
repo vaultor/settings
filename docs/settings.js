@@ -32,9 +32,9 @@ const codeCSS = `
 
 const costCSS = `
   [data-tooltip-id="global"] span {
-    margin-right: 5px;
+    margin-right: 8px;
+    font0size: 0.9em !important;
     color: #ffc533 !important;
-    font-weight: 600 !important;
   }
 `;
 
@@ -89,7 +89,7 @@ try {
   let length = nextStylesheet.cssRules.length;
   nextStylesheet.insertRule(hoverCSS, length++);
   nextStylesheet.insertRule(codeCSS, length++);
-  // nextStylesheet.insertRule(costCSS, length++);
+  nextStylesheet.insertRule(costCSS, length++);
   nextStylesheet.insertRule(bodyCSS, length++);
   nextStylesheet.insertRule(pane1CSS, length++);
   nextStylesheet.insertRule(pane2CSS, length++);
