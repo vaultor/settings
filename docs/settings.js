@@ -34,6 +34,7 @@ const costCSS = `
   [data-tooltip-id="global"] > span:nth-child(1) {
     margin-right: 8px;
     font-size: 0.9em !important;
+    font-weight: 600 !important;
     color: #ffc533 !important;
   }
 `;
