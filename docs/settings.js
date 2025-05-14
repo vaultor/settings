@@ -33,7 +33,7 @@ const codeCSS = `
 const costCSS = `
   [data-tooltip-id="global"] > span:nth-child(1) {
     margin-right: 8px;
-    font-size: 0.9em !important;
+    font-size: 0.8em !important;
     font-weight: 600 !important;
     color: #ffc533 !important;
   }
@@ -72,7 +72,6 @@ const pane3aCSS = `
 `;
 
 // 3rd pane (right-bottom)
-// old: chat-space-background
 const pane3bCSS = `
   [data-element-id="chat-space-background"] {
     background-color: ${CHATSPACE_COLOR} !important;
@@ -101,4 +100,4 @@ try {
   console.log(error);
 }
 
-console.log("ver 20250113.02");
+console.log("ver 20250514.02");
