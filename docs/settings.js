@@ -113,10 +113,10 @@ try {
   nextStylesheet.insertRule(pane2aCSS, length++)
   nextStylesheet.insertRule(pane3bCSS, length++)
 
-  const span = document
-    .querySelector('button[data-element-id="new-chat-button-in-side-bar"]')
-    ?.querySelector(":scope > span:last-child")
-  if (span) span.textContent = version
+  // const span = document
+  //   .querySelector('button[data-element-id="new-chat-button-in-side-bar"]')
+  //   ?.querySelector(":scope > span:last-child")
+  // if (span) span.textContent = version
 } catch (error) {
   console.log(error)
 }
