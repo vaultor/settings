@@ -98,7 +98,7 @@ const pane3bCSS = `
   }
 `
 
-const version = "20250802.10"
+const version = "20250802.12"
 
 try {
   let length = nextStylesheet.cssRules.length
@@ -112,10 +112,10 @@ try {
   nextStylesheet.insertRule(pane2aCSS, length++)
   nextStylesheet.insertRule(pane3bCSS, length++)
 
-  document.querySelector('button[data-element-id="new-chat-button-in-side-bar"]')
-  ?.querySelector(':scope > span:last-child')
-  ?.textContent = version
-
+  const span = document
+    .querySelector('button[data-element-id="new-chat-button-in-side-bar"]')
+    ?.querySelector(":scope > span:last-child")
+  if (span) span.textContent = version
 } catch (error) {
   console.log(error)
 }
