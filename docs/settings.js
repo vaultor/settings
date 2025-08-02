@@ -1,8 +1,9 @@
-const BODY_COLOR = "#1c1c1c" //       (200 1% 11%)
-const WORKSPACE_COLOR = "#141515" //  (200 2% 8%)
-const SIDEBAR_COLOR = "#161717" //    (200 2% 9%)
-const CHATBOX_COLOR = "#282929" //    (200 1% 16%)
-const BORDER_COLOR = "#252727" //     (200 2% 15%)
+const HUE = 200
+const BODY_COLOR = "oklch(0.240 0 0)"
+const WORK_COLOR = `oklch(0.195 0.002 ${HUE})`
+const SIDE_COLOR = `oklch(0.205 0.002 ${HUE})`
+const CHAT_COLOR = `oklch(0.28 0.001 ${HUE})`
+const BORDER_COLOR = `oklch(0.28 0.002 ${HUE})`
 
 const nextStylesheet = document.querySelector("link[data-n-g]").sheet
 
@@ -46,10 +47,10 @@ const bodyCSS = `
     font-feature-settings: "liga", "tnum";
 
     --sidebar-menu-color: hsl(341.77215189873414deg 49% 17%);
-    --sidebar-color: ${SIDEBAR_COLOR} !important;
+    --sidebar-color: ${SIDE_COLOR} !important;
     --popup-color: hsl(341.77215189873414deg 76% 20%);
-    --workspace-color: ${WORKSPACE_COLOR} !important;
-    --main-dark-color: ${WORKSPACE_COLOR} !important;
+    --workspace-color: ${WORK_COLOR} !important;
+    --main-dark-color: ${WORK_COLOR} !important;
     --main-dark-popup-color: #1A1C1F;
   }
 `
@@ -87,14 +88,14 @@ const pane2bCSS = `
 // Pane 3a (right-top)
 const pane3aCSS = `
   [data-element-id="chat-space-beginning-part"] {
-    background-color: ${SIDEBAR_COLOR} !important;
+    background-color: ${WORK_COLOR} !important;
   }
 `
 
 // Pane 3b (right-bottom)
 const pane3bCSS = `
   [data-element-id="chat-space-end-part"] > div[role="presentation"] {
-    background-color: ${CHATBOX_COLOR} !important;
+    background-color: ${CHAT_COLOR} !important;
   }
 `
 
