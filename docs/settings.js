@@ -99,7 +99,7 @@ const pane3bCSS = `
   }
 `
 
-const version = "20250802.12"
+const version = "20250802.15"
 
 try {
   let length = nextStylesheet.cssRules.length
